@@ -1,19 +1,37 @@
-import { useState } from 'react';
+import { useContext } from 'react';
 import Snack from '../Snack/Snack';
 import TextOptions from '../TextOptions/TextOptions';
 import { SnackOption, SnacksContainer } from './style';
-import { menu } from '../../data/menu';
+import { ItemsContext } from '../../context/items';
 
 export default function Snacks() {
-    const [snackMenu, setSnackMenu] = useState(menu.snacks);
+    const { menu, setSelectedItems, setTotal } = useContext(ItemsContext);
+
+    function toggleItems(name: string) {
+        setSelectedItems(prevItems => {
+            const isSelected = prevItems.some(item => item.name === name);
+
+            const newItems = isSelected
+                ? prevItems.filter(item => item.name !== name)
+                : [...prevItems, menu.snacks.find(item => item.name === name)!];
+
+            const newTotal = newItems.reduce((acc, item) => acc + Number(item.price), 0);
+            setTotal(newTotal);
+
+            return newItems;
+        });
+    }
 
     return (
         <SnacksContainer>
             <TextOptions text='Escolha seu lanche' />
             <SnackOption>
-                {snackMenu.length > 0 && (
-                    snackMenu.map((snack, i) =>
-                        <Snack snack={snack} key={i} />
+                {menu.snacks.length > 0 && (
+                    menu.snacks.map((snack, i) =>
+                        <div onClick={() => toggleItems(snack.name)}>
+                            <Snack snack={snack} key={i}
+                            />
+                        </div>
                     )
                 )}
             </SnackOption>

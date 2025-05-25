@@ -1,3 +1,4 @@
+import { FaRegCheckCircle } from 'react-icons/fa';
 import styled from 'styled-components';
 
 export const DessertContainer = styled.div`
@@ -50,6 +51,7 @@ export const PriceDessert = styled.div`
     height: 19px;
     display: flex;
     align-items: flex-end;
+    justify-content: space-between;
     p{
     font-size: 16px;
     font-weight: 400;
@@ -58,3 +60,8 @@ export const PriceDessert = styled.div`
     white-space: normal;
     }   
 `
+
+export const CheckIcon = styled(FaRegCheckCircle)`
+  font-size: 16px;
+  color: #32B72F;
+`;

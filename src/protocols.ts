@@ -5,7 +5,7 @@ export type OptionType = {
 export type MenuItemType = {
     name: string;
     image: string;
-    price: string;
+    price: number;
     description: string;
 };
 
