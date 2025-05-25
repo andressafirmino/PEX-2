@@ -3,7 +3,7 @@ import { HeaderContainer, SubtitleHeader, TitleHeader } from './style';
 export default function Header() {
   return (
     <HeaderContainer>
-     <TitleHeader>Palazzo Del Massas</TitleHeader>
+     <TitleHeader>É pra já!</TitleHeader>
      <SubtitleHeader>Seu lanche em até 30min</SubtitleHeader>
     </HeaderContainer>
   );

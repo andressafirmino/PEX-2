@@ -15,7 +15,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
         messageLines.unshift("Olá, gostaria de fazer o pedido:");
 
         const message = `${messageLines.join('\n')}\nTotal: ${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(total)}`;
-        const phoneNumber = '55999999999'; // Substitua pelo número real
+        const phoneNumber = '5521999999999'; // Substitua pelo número real
         const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
         window.open(url, '_blank');

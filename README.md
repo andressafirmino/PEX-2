@@ -1,54 +1,35 @@
-# React + TypeScript + Vite
+# Resume
+This project was created as a simple and practical way to modernize the service provided by a snack bar. The idea is that, by accessing a link, customers can view the full menu, choose the items they want and easily place their order — all from their cell phone or computer. With this, we aim to make the experience faster, more organized and more comfortable, both for those ordering and for those serving.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Project link](https://github.com/andressafirmino/PEX-2)
 
-Currently, two official plugins are available:
+# How it works?
+This project was developed to simplify the selection of items from a menu.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### Features.
 
-## Expanding the ESLint configuration
+- Select one or more items from the menu.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- The total amount is updated according to the selected items
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- The checkout button is only enabled when one or more items are selected
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- When clicking the checkout button, a summary of the order appears on the screen, with a button to confirm the order
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- When clicking the confirm button, the user is redirected to the conversation with the store with the order already ready
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+# Technologies used
+For this project, the following were used:
+
+- Node (version 21.3.0);
+- ReactJS;
+- TypeScript;
+- Styled-components.
+
+# How to run in development?
+To run this project under development, you need to follow the steps below:
+
+1. Have the [Git](https://git-scm.com/), [Node.js](https://nodejs.org/en/) and [NPM](https://www.npmjs.com/) tools installed on your machine to be able to work on the project; 
+2. Clone this repository from GitHub to your machine: [https://github.com/andressafirmino/PEX-2](https://github.com/andressafirmino/PEX-2);
+3. Enter the project folder on your machine, open the terminal and download the necessary dependencies with the command: `npm install`;
+4. To run the project in development, run the command `npm run dev`
